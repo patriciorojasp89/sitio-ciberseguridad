@@ -108,3 +108,6 @@ $(document).ready(function () {
         });
     }
 });
+
+// mejora visual al hacer scroll en páginas largas 
+console.log("Archivo main.js cargado correctamente");
