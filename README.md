@@ -1,6 +1,8 @@
 # Sitio web sobre Ciberseguridad - CiberSegura
 
 Este proyecto es un sitio web informativo sobre ciberseguridad. Forma parte de la evaluación del módulo y está desarrollado con **HTML5**, **CSS3**, **Bootstrap**, **JavaScript** y **jQuery**.
+## Autor
+Proyecto desarrollado como parte del módulo de portafolio del bootcamp Fullstack.
 
 ## Estructura del proyecto
 
