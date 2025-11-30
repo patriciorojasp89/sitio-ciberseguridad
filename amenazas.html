@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad Digital | Amenazas comunes</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+    >
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR (misma que en index, cambiando activo) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                CiberSegura
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="amenazas.html">Amenazas comunes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consejos.html">Consejos de seguridad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CABECERA -->
+    <header class="py-5 bg-dark text-light">
+        <div class="container">
+            <h1 class="fw-bold mb-3">Amenazas cibernéticas más comunes</h1>
+            <p class="mb-0 text-white-50">
+                Conocer cómo funcionan los ataques más frecuentes te ayuda a detectarlos a tiempo
+                y tomar mejores decisiones para proteger tu información.
+            </p>
+        </div>
+    </header>
+
+    <!-- TARJETAS DE AMENAZAS -->
+    <main class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold mb-3">Tipos de ataques</h2>
+                    <p class="text-muted">
+                        Estos son algunos de los ataques más habituales que se realizan a usuarios,
+                        empresas y servicios en línea.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- PHISHING -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm amenaza-card" data-tipo="phishing">
+                        <div class="card-body">
+                            <h5 class="card-title">Phishing</h5>
+                            <p class="card-text text-muted">
+                                Intento de engañar al usuario para que entregue datos confidenciales
+                                (contraseñas, tarjetas, etc.) mediante correos, mensajes o sitios web falsos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RANSOMWARE -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm amenaza-card" data-tipo="ransomware">
+                        <div class="card-body">
+                            <h5 class="card-title">Ransomware</h5>
+                            <p class="card-text text-muted">
+                                Tipo de malware que cifra los archivos de un sistema y exige un pago
+                                (rescate) a cambio de devolver el acceso a la información.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MALWARE -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm amenaza-card" data-tipo="malware">
+                        <div class="card-body">
+                            <h5 class="card-title">Malware</h5>
+                            <p class="card-text text-muted">
+                                Programa malicioso diseñado para dañar dispositivos, robar información,
+                                espiar al usuario o tomar control del sistema sin permiso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DDoS -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm amenaza-card" data-tipo="ddos">
+                        <div class="card-body">
+                            <h5 class="card-title">Ataques DDoS</h5>
+                            <p class="card-text text-muted">
+                                Ataques que saturan un servidor o servicio con múltiples solicitudes,
+                                impidiendo que los usuarios legítimos puedan acceder.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACORDEÓN DE CASOS REALES -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="fw-bold mb-3 text-center">Ejemplos de casos reales</h3>
+                    <p class="text-muted text-center mb-4">
+                        A continuación se presentan situaciones inspiradas en incidentes reales
+                        para ilustrar cómo se manifiestan estas amenazas en la práctica.
+                    </p>
+
+                    <div class="accordion" id="accordionCasos">
+                        <!-- Caso Phishing -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingPhishing">
+                                <button class="accordion-button" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapsePhishing"
+                                        aria-expanded="true"
+                                        aria-controls="collapsePhishing">
+                                    Caso de phishing bancario
+                                </button>
+                            </h2>
+                            <div id="collapsePhishing" class="accordion-collapse collapse show"
+                                 aria-labelledby="headingPhishing" data-bs-parent="#accordionCasos">
+                                <div class="accordion-body">
+                                    Un usuario recibe un correo supuestamente de su banco indicando que su
+                                    cuenta será bloqueada si no actualiza sus datos. El enlace lo lleva a una
+                                    página muy similar a la oficial, pero en realidad es un sitio falso que
+                                    captura su RUT, contraseña y coordenadas de seguridad.
+                                    <br><br>
+                                    <strong>Cómo prevenirlo:</strong> no hacer clic en enlaces de correos
+                                    sospechosos, escribir manualmente la dirección del banco en el navegador y
+                                    verificar el certificado de seguridad del sitio.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Caso Ransomware -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingRansomware">
+                                <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseRansomware"
+                                        aria-expanded="false"
+                                        aria-controls="collapseRansomware">
+                                    Empresa afectada por ransomware
+                                </button>
+                            </h2>
+                            <div id="collapseRansomware" class="accordion-collapse collapse"
+                                 aria-labelledby="headingRansomware" data-bs-parent="#accordionCasos">
+                                <div class="accordion-body">
+                                    Una pequeña empresa abre un archivo adjunto aparentemente inofensivo
+                                    enviado por un “proveedor”. El archivo ejecuta un ransomware que cifra
+                                    todos los documentos del servidor y muestra un mensaje pidiendo pago en
+                                    criptomonedas para recuperar los archivos.
+                                    <br><br>
+                                    <strong>Cómo prevenirlo:</strong> mantener copias de seguridad actualizadas,
+                                    usar antivirus y no abrir adjuntos de remitentes desconocidos o sospechosos.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Caso Malware -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingMalware">
+                                <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseMalware"
+                                        aria-expanded="false"
+                                        aria-controls="collapseMalware">
+                                    Descarga de software pirata con malware
+                                </button>
+                            </h2>
+                            <div id="collapseMalware" class="accordion-collapse collapse"
+                                 aria-labelledby="headingMalware" data-bs-parent="#accordionCasos">
+                                <div class="accordion-body">
+                                    Un estudiante descarga una versión “gratuita” de un programa de pago desde
+                                    una página no oficial. El instalador incluye malware que registra las teclas
+                                    que presiona y roba sus credenciales de correo y redes sociales.
+                                    <br><br>
+                                    <strong>Cómo prevenirlo:</strong> descargar software solo de sitios oficiales,
+                                    evitar cracks y programas piratas, y mantener el sistema operativo actualizado.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Caso DDoS -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingDdos">
+                                <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseDdos"
+                                        aria-expanded="false"
+                                        aria-controls="collapseDdos">
+                                    Caída de un sitio por ataque DDoS
+                                </button>
+                            </h2>
+                            <div id="collapseDdos" class="accordion-collapse collapse"
+                                 aria-labelledby="headingDdos" data-bs-parent="#accordionCasos">
+                                <div class="accordion-body">
+                                    Un servicio en línea sufre un aumento repentino y masivo de tráfico
+                                    proveniente de miles de dispositivos infectados (botnet). El servidor no
+                                    alcanza a procesar todas las peticiones y el sitio queda fuera de servicio
+                                    durante varias horas.
+                                    <br><br>
+                                    <strong>Cómo prevenirlo:</strong> usar servicios de mitigación DDoS,
+                                    balanceadores de carga y monitoreo constante del tráfico.
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- /accordion -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4 bg-dark text-center text-white-50">
+        <div class="container">
+            <small>
+                &copy; <span id="year"></span> CiberSegura. Sitio educativo sobre ciberseguridad.
+            </small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery -->
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous">
+    </script>
+
+    <!-- JS propio -->
+    <script src="js/main.js"></script>
+</body>
+</html>

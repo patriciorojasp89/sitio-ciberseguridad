@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad Digital | Consejos de seguridad</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+    >
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                CiberSegura
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="amenazas.html">Amenazas comunes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="consejos.html">Consejos de seguridad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CABECERA -->
+    <header class="py-5 bg-dark text-light">
+        <div class="container">
+            <h1 class="fw-bold mb-3">Consejos para protegerte en línea</h1>
+            <p class="mb-0 text-white-50">
+                Pequeños cambios en tus hábitos digitales pueden marcar una gran diferencia en tu seguridad.
+            </p>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-5">
+                <!-- LISTA DE BUENAS PRÁCTICAS -->
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3">Buenas prácticas de ciberseguridad</h2>
+                    <p class="text-muted">
+                        Aplica estos consejos en tu vida diaria para reducir el riesgo de sufrir fraudes,
+                        pérdidas de información o robo de identidad.
+                    </p>
+
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item">
+                            <strong>Usa contraseñas robustas</strong> y diferentes para cada cuenta.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Activa la autenticación en dos pasos (2FA)</strong> siempre que sea posible.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>No compartas códigos ni contraseñas</strong> por WhatsApp, correo o llamadas.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Desconfía de enlaces y archivos adjuntos</strong> de remitentes desconocidos.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Mantén tu sistema operativo y programas actualizados</strong> para corregir vulnerabilidades.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Evita redes Wi-Fi públicas</strong> para operaciones sensibles como banca en línea.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Realiza copias de seguridad</strong> periódicas de tu información importante.
+                        </li>
+                    </ul>
+
+                    <p class="small text-muted">
+                        <em>Tip:</em> un gestor de contraseñas puede ayudarte a recordar claves largas y complejas.
+                    </p>
+
+                    <!-- BOTÓN PARA ABRIR MODAL DEL TEST -->
+                    <div class="mt-4">
+                        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalTestSeguridad">
+                            Realizar test de seguridad
+                        </button>
+                    </div>
+                </div>
+
+                <!-- FORMULARIO DE CONTACTO -->
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3">Formulario de contacto</h2>
+                    <p class="text-muted">
+                        Si tienes dudas o quieres más información sobre cómo mejorar tu seguridad digital,
+                        completa este formulario.
+                    </p>
+
+                    <!-- Alertas -->
+                    <div id="formAlert" class="alert d-none" role="alert"></div>
+
+                    <form id="contactForm" novalidate>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            <div class="invalid-feedback">
+                                Por favor ingresa tu nombre.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">
+                                Ingresa un correo electrónico válido.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="motivo" class="form-label">Motivo de consulta</label>
+                            <select class="form-select" id="motivo" name="motivo" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="proteccion-cuentas">Protección de cuentas</option>
+                                <option value="proteccion-dispositivos">Protección de dispositivos</option>
+                                <option value="formacion">Formación / cursos</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Selecciona un motivo de consulta.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                            <div class="invalid-feedback">
+                                Escribe un mensaje para poder ayudarte.
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">
+                            Enviar consulta
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- MODAL: TEST DE SEGURIDAD -->
+    <div class="modal fade" id="modalTestSeguridad" tabindex="-1" aria-labelledby="modalTestSeguridadLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTestSeguridadLabel">Test básico de seguridad digital</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">
+                        Responde las siguientes preguntas y luego haz clic en <strong>Calcular resultado</strong>
+                        para recibir retroalimentación.
+                    </p>
+
+                    <!-- Pregunta 1 -->
+                    <div class="mb-3">
+                        <p><strong>1. ¿Cuál es la mejor opción para una contraseña segura?</strong></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1a" value="simple">
+                            <label class="form-check-label" for="q1a">
+                                123456 o fecha de nacimiento.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1b" value="segura">
+                            <label class="form-check-label" for="q1b">
+                                Combinación de letras, números y símbolos, sin relación directa contigo.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="mb-3">
+                        <p><strong>2. Recibes un correo "de tu banco" pidiéndote que ingreses a un enlace y actualices tus datos. ¿Qué haces?</strong></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2a" value="clic">
+                            <label class="form-check-label" for="q2a">
+                                Hago clic al tiro en el enlace y pongo mis datos para evitar problemas.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2b" value="verificar">
+                            <label class="form-check-label" for="q2b">
+                                No uso el enlace del correo; abro el sitio oficial del banco escribiendo la dirección o llamo al banco.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="mb-3">
+                        <p><strong>3. Sobre la autenticación en dos pasos (2FA), ¿qué es lo más recomendable?</strong></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" id="q3a" value="no-importa">
+                            <label class="form-check-label" for="q3a">
+                                No es tan importante, con una sola contraseña basta.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" id="q3b" value="activar">
+                            <label class="form-check-label" for="q3b">
+                                Activarla siempre que se pueda, especialmente en correo, redes sociales y cuentas bancarias.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- FEEDBACK -->
+                    <div id="testFeedback" class="mt-3 fw-bold"></div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCalcularTest" type="button" class="btn btn-primary">
+                        Calcular resultado
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-4 bg-dark text-center text-white-50 mt-auto">
+        <div class="container">
+            <small>
+                &copy; <span id="year"></span> CiberSegura. Sitio educativo sobre ciberseguridad.
+            </small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery -->
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous">
+    </script>
+
+    <!-- JS propio -->
+    <script src="js/main.js"></script>
+</body>
+</html>
